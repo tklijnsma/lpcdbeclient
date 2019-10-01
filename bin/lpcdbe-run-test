@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+
+import lpcdbeclient
+import numpy as np
+import os
+import os.path as osp
+
+
+client = lpcdbeclient.Client(
+    module_name = 'test3-module-kl',
+    address = 'azurb.fnal.gov'
+    )
+
+test_npy_file = osp.join(
+    osp.dirname(lpcdbeclient.__file__),
+    'testimg.npy'
+    )
+
+prediction, time = client.inference_npy(test_npy_file)
+
+print('Prediction: {0}'.format(prediction))
+print('Time: {0:.3} ms'.format(time*1000.))
