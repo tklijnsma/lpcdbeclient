@@ -10,7 +10,9 @@ conda activate inferedge2
 
 To install this package, either:
 
-`pip install lpcdbeclient`
+```
+pip install lpcdbeclient
+```
 
 Or:
 
@@ -21,4 +23,6 @@ pip install -e lpcdbeclient
 
 To run:
 
-`lpcdbe-run`
+```
+lpcdbe-run
+```
