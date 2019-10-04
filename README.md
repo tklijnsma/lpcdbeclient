@@ -25,5 +25,5 @@ To run:
 
 ```
 wget https://www.dropbox.com/s/qb6tozu1gdrfdfu/test_file_0.h5?dl=1 -O test_file_0.h5
-lpcdbe-run --testfile test_file_0.h5
+lpcdbe-run --testfile test_file_0.h5 -a test-module-kl3
 ```
