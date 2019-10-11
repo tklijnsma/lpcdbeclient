@@ -32,7 +32,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--max-count', type=int, default=None, help='Maximum number of events to inference')
     parser.add_argument('-m', '--module', type=str, default='test3-module-kl', help='Name of the azureml module to send the image to')
-    parser.add_argument('-a', '--address', type=str, default='azurb.fnal.gov', help='Address of the DBE')
+    parser.add_argument('-a', '--address', type=str, help='Address of the DBE')
     parser.add_argument( '--testfile', type=str, default='/uscms/home/klijnsma/nobackup/data/dbe/test/test_file_0.h5', help='Path to the .h5 file in which the images are stored')
     args = parser.parse_args()
 

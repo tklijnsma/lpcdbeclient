@@ -4,11 +4,15 @@ import lpcdbeclient
 import numpy as np
 import os
 import os.path as osp
+import argparse
 
+parser = argparse.ArgumentParser()
+parser.add_argument('-a', '--address', type=str, help='Address of the DBE' )
+args = parser.parse_args()
 
 client = lpcdbeclient.Client(
     module_name = 'test3-module-kl',
-    address = 'azurb.fnal.gov'
+    address = args.address
     )
 
 test_npy_file = osp.join(
