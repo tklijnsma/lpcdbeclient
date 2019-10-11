@@ -37,14 +37,19 @@ class Service(object):
         super(Service, self).__init__()
 
         print('Setting up ws...')
+        if not os.path.isfile('config.json'):
+            raise RuntimeError(
+                'No file config.json is found, which is needed to setup '
+                'the workspace. Please first download the config.json from '
+                'the Azure portal (https://portal.azure.com) and put it in '
+                'this directory.'
+                )
         self.ws = Workspace.from_config()
-        self.iot_hub_name = "fermi-iot"
         self.iot_device_id = "fermi-edge"
         print(self.ws)
 
         self.module_name = "test-module-kl3"
         self.image_name = "im-klijnsma-tquarkrn50-v1-s0"
-
         self.port = 50051
 
 
